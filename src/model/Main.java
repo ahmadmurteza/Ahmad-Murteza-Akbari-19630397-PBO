@@ -13,6 +13,14 @@ public class Main {
 
 //        object Pegawai Murteza
         murteza.read();
+        murteza.totalGajih();
+        murteza.bonusKeluarKota(murteza.getGajihAkhir());
+        murteza.uangTransportKeluarKota(20);
+        if (murteza.absenPegawai(true)) {
+            System.out.println("++++ Karyawan Hadir ++++");
+        } else {
+            System.out.println("---- Karyawan Tidak Hadir ----");
+        }
 
         if (murteza.create()) {
             System.out.println("++++ Data Berhasil Ditambahkan ++++");
@@ -33,6 +41,8 @@ public class Main {
         }
 
 
+        System.out.println("*************************************************************************************" +
+                "********************************************************************");
 //        object pegawai akbari
         akbari.read();
 
@@ -54,6 +64,8 @@ public class Main {
             System.out.println("---- Data Gagal Dihapus ----");
         }
 
+        System.out.println("*************************************************************************************" +
+                "********************************************************************");
 //        object pegawai ahmad
         ahmad.read();
 

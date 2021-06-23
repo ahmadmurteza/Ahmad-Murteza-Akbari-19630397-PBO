@@ -134,16 +134,33 @@ public class Pegawai {
     }
 
     //    behaviour method
-    public boolean cutiTahunan(){
-        return false;
+    public void totalGajih(){
+        double totalGajih = gajihAkhir+tunjanganTransportasi+tunjanganLembur;
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        System.out.println("Total Gajih : Rp"+ totalGajih);
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 
-    public boolean absenPegawai(){
-        return false;
+    public void uangTransportKeluarKota (int jarak) {
+        double uangTransport = jarak*50000;
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        System.out.println("Uang Transport Keluar Kota : Rp"+ uangTransport);
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 
-    public boolean bonusTugasKeluarKota(){
-        return false;
+    public void bonusKeluarKota (double gajih) {
+        double bonus = gajih*30/100;
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        System.out.println("Bonus keluar kota 30% dari gajih : Rp"+ bonus);
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+    }
+
+    public boolean absenPegawai (boolean kehadiran) {
+        if(kehadiran){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public boolean create() {
