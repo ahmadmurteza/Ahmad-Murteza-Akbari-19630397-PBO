@@ -175,11 +175,29 @@ public class Pegawai {
     }
 
     public boolean update() {
-        return false;
+        String insertSql = "UPDATE pegawai SET idPegawai='"+ idPegawai +"', namaPegawai='"+ namaPegawai +"'," +
+                " jarakRumahKeKantor='"+ jarakRumahKeKantor +"', masaKerjaPegawai='"+ masaKerjaPegawai +"'," +
+                " lembur='"+ lembur +"', gajihAwal='"+ gajihAwal +"', gajihAkhir='"+ gajihAkhir +"', " +
+                "tunjanganLembur='"+ tunjanganLembur +"', tunjanganTransportasi='"+ tunjanganTransportasi +"'" +
+                " WHERE idPegawai="+ idPegawai;
+        System.out.println(insertSql);
+        boolean berhasil = true;
+        if (berhasil) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public boolean delete() {
-        return false;
+    public boolean delete(String idPegawaiDihapus) {
+        String insertSql = "DELETE FROM pegawai WHERE idPegawai="+ idPegawaiDihapus;
+        System.out.println(insertSql);
+        boolean berhasil = true;
+        if (berhasil) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
